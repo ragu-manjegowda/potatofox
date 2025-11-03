@@ -3,9 +3,9 @@
 {
   inputs = {
     # other stuff
-    
+
     potatofox = {
-      url = "git+https://codeberg.org/awwpotato/PotatoFox";
+      url = "git+https://codeberg.org/da157/PotatoFox";
       flake = false;
     };
   };
@@ -39,7 +39,7 @@ in
       };
     };
   };
-  
+
   home.file.".mozilla/firefox/${profile}/chrome" = {
     source = "${potatofox}/chrome";
     recursive = true;

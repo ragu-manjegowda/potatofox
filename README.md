@@ -46,14 +46,14 @@ Extension:
 - [Userchrome Toggle Extended](https://addons.mozilla.org/en-US/firefox/addon/userchrome-toggle-extended)
 - [Firefox Color](https://addons.mozilla.org/en-US/firefox/addon/firefox-color) (optional)
 
-Open the [releases tab](https://codeberg.org/awwpotato/PotatoFox/releases) and download the correct release for your version of Firefox (Urlbar > about:support > Application Basics > Version). Then copy the chrome directory and user.js file into your Firefox profiles directory (about:support > Application Basics > Profile Directory), then restart Firefox.
+Open the [releases tab](https://codeberg.org/da157/PotatoFox/releases) and download the correct release for your version of Firefox (Urlbar > about:support > Application Basics > Version). Then copy the chrome directory and user.js file into your Firefox profiles directory (about:support > Application Basics > Profile Directory), then restart Firefox.
 
 <details><summary>Advanced (cli) install (macOS/Linux)</summary>
 
 #### Using git
 
 ```bash
-git clone https://codeberg.org/awwpotato/potatofox.git
+git clone https://codeberg.org/da157/potatofox.git
 cd potatofox
 ln -sr user.js chrome ~/.mozilla/firefox/<profile> # Linux
 cp -r user.js chrome ~/Library/Application Support/Firefox/Profiles/<profile> # macOS
@@ -63,7 +63,7 @@ cp -r user.js chrome ~/Library/Application Support/Firefox/Profiles/<profile> # 
 
 ```bash
 nyoom profile <profile-dir>
-nyoom add codeberg:awwpotato/potatofox
+nyoom add codeberg:da157/potatofox
 nyoom switch potatofox
 ```
 
@@ -130,7 +130,7 @@ The variables used by the theme are in `vars.css` and `userChrome.css` (colors).
 
 ## Mirrors
 
-Currently potatofox is available on [codeberg](https://codeberg.org/awwpotato/PotatoFox) (main) and [git.gay](https://git.gay/awwpotato/PotatoFox) (backup)
+Currently potatofox is available on [codeberg](https://codeberg.org/da157/PotatoFox) (main) and [git.gay](https://git.gay/awwpotato/PotatoFox) (backup)
 
 ## License
 
