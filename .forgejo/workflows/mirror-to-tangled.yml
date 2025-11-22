@@ -1,0 +1,13 @@
+name: mirror to tangled
+
+on:
+  push:
+
+jobs:
+  tangle:
+    runs-on: codeberg-small
+    steps:
+      - uses: https://github.com/gwennlbh/to-tangled@v0.3
+        with:
+          repo: da157.id/potatofox
+          ssh-key: ${{ secrets.TANGLED_KEY }}
