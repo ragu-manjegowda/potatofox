@@ -142,7 +142,8 @@ so you will want to change the variables inside there.
 
 ## mirrors
 
-currently potatofox is available on [codeberg](https://codeberg.org/da157/potatofox) (main) and [git.gay](https://git.gay/awwpotato/potatofox) (backup)
+currently potatofox is available on [codeberg](https://codeberg.org/da157/potatofox) (main)
+and [tangled](https://tangled.org/da157.id/potatofox) and [git.gay](https://git.gay/awwpotato/potatofox) (mirrors)
 
 ## license
 
