@@ -6,6 +6,7 @@ on:
 jobs:
   tangle:
     runs-on: codeberg-small
+    if: secrets.TANGLED_KEY
     steps:
       - uses: https://github.com/gwennlbh/to-tangled@v0.3
         with:
