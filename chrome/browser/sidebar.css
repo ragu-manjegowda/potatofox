@@ -118,6 +118,7 @@
     #sidebar-box {
       position: relative;
       z-index: 10;
+      overflow: visible !important;
       min-width: var(--uc-sidebar-width) !important;
       width: var(--uc-sidebar-width) !important;
       max-width: var(--uc-sidebar-width) !important;
@@ -148,7 +149,8 @@
 
     #sidebar-box:hover > #sidebar-header,
     #sidebar-box:hover > #sidebar-header > #sidebar-switcher-target,
-    #sidebar-box:hover > .sidebar-browser-stack > #sidebar {
+    #sidebar-box:hover > .sidebar-browser-stack > #sidebar,
+    #sidebar-box:hover #sidebar {
       transition:
         min-width var(--uc-transition),
         max-width var(--uc-transition),
@@ -156,10 +158,13 @@
         background var(--uc-transition),
         backdrop-filter var(--uc-transition) !important;
       min-width: var(--uc-sidebar-hover-width) !important;
+      width: var(--uc-sidebar-hover-width) !important;
+      max-width: var(--uc-sidebar-hover-width) !important;
     }
 
     #sidebar-box:hover > #sidebar-header,
-    #sidebar-box:hover > .sidebar-browser-stack > #sidebar {
+    #sidebar-box:hover > .sidebar-browser-stack > #sidebar,
+    #sidebar-box:hover #sidebar {
       background-color: var(--uc-bg-tran) !important;
       @media not -moz-pref( "uc.tweak.no-blur") {
         backdrop-filter: blur(var(--uc-blur-radius)) !important;
