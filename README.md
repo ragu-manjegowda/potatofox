@@ -2,9 +2,6 @@
 
 [Ragu`s Maintained Copy of Potatofox](https://codeberg.org/da157/potatofox)
 
-<div style="display: flex;">
-<div style="flex: 1;">
-
 a firefox and sidebery css theme.
 
 > [!note]
@@ -22,22 +19,31 @@ a firefox and sidebery css theme.
 - support for vertical tabs on the left or right
 - tons for blur and translucency
 
-</div>
-
-<div style="flex: 1;">
-<img src="./media/screenshot0.png" width="100%" alt="firefox with custom css applied">
-</div>
-</div>
-
 ## screenshots
 
-<div align="center">
-<img src="./media/screenshot1.png" width="49%" alt="potatofox theme with sidebar collapsed">
-<img src="./media/screenshot2.png" width="49%" alt="potatofox theme with navbar hidden and sidebar collapsed">
-<img src="./media/screenshot3.png" width="32%" alt="potatofox theme with navbar and sidebar hidden while the urlbar is floating">
-<img src="./media/screenshot4.png" width="32%" alt="potatofox theme with navbar and sidebar hidden">
-<img src="./media/screenshot5.png" width="32%" alt="borderless potatofox theme with navbar and sidebar hidden">
-</div>
+### With both
+
+<p align="center">
+  <img src="./media/sidebar-urlbar.png" width="900" alt="Potatofox with sidebar and urlbar" title="With both">
+</p>
+
+### With sidebar
+
+<p align="center">
+  <img src="./media/floating-sidebar.png" width="900" alt="Potatofox with floating sidebar" title="With sidebar">
+</p>
+
+### With urlbar
+
+<p align="center">
+  <img src="./media/floating-urlbar.png" width="900" alt="Potatofox with floating urlbar" title="With urlbar">
+</p>
+
+### With neither
+
+<p align="center">
+  <img src="./media/no-sidebar-no-urlbar.png" width="900" alt="Potatofox with no sidebar and no urlbar" title="With neither">
+</p>
 
 ## install instructions
 

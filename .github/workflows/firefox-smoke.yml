@@ -1,0 +1,46 @@
+name: Firefox smoke tests
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  arch-linux:
+    name: Arch Linux
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Smoke test in Arch Linux
+        run: |
+          docker run --rm \
+            --security-opt seccomp=unconfined \
+            -v "$PWD:/work:ro" \
+            -w /work \
+            archlinux:latest \
+            bash -lc '
+              set -euo pipefail
+              for attempt in 1 2 3; do
+                pacman -Syu --noconfirm firefox python && break
+                if [ "$attempt" = 3 ]; then exit 1; fi
+                sleep 10
+              done
+              python scripts/smoke-firefox-profile.py firefox
+            '
+
+  macos:
+    name: macOS
+    runs-on: macos-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install Firefox
+        run: brew install --cask firefox
+
+      - name: Smoke test in Firefox
+        run: python3 scripts/smoke-firefox-profile.py /Applications/Firefox.app/Contents/MacOS/firefox

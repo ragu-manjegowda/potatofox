@@ -1,2 +1,3 @@
 chrome/overrides.css
 .opencode/
+__pycache__/
