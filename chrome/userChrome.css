@@ -26,6 +26,57 @@
     }
   }
 
+  @media not -moz-pref( "uc.theme.no-solarized") {
+    --uc-solarized-base03: #002b36;
+    --uc-solarized-base02: #073642;
+    --uc-solarized-base01: #586e75;
+    --uc-solarized-base00: #657b83;
+    --uc-solarized-base0: #839496;
+    --uc-solarized-base1: #93a1a1;
+    --uc-solarized-base2: #eee8d5;
+    --uc-solarized-base3: #fdf6e3;
+    --uc-solarized-yellow: #b58900;
+    --uc-solarized-orange: #cb4b16;
+    --uc-solarized-red: #dc322f;
+    --uc-solarized-magenta: #d33682;
+    --uc-solarized-violet: #6c71c4;
+    --uc-solarized-blue: #268bd2;
+    --uc-solarized-cyan: #2aa198;
+    --uc-solarized-green: #859900;
+    --uc-solarized-accent: light-dark(var(--uc-solarized-blue), var(--uc-solarized-green));
+
+    --uc-bg-opaque: light-dark(var(--uc-solarized-base2), var(--uc-solarized-base02));
+    --uc-content-bg: light-dark(var(--uc-solarized-base3), var(--uc-solarized-base03));
+    --toolbar-bgcolor: light-dark(var(--uc-solarized-base3), var(--uc-solarized-base03)) !important;
+    --toolbar-color: light-dark(var(--uc-solarized-base01), var(--uc-solarized-base0)) !important;
+    --toolbar-field-background-color: light-dark(var(--uc-solarized-base2), var(--uc-solarized-base02)) !important;
+    --toolbar-field-color: light-dark(var(--uc-solarized-base01), var(--uc-solarized-base0)) !important;
+    --toolbar-field-focus-background-color: light-dark(var(--uc-solarized-base2), var(--uc-solarized-base02)) !important;
+    --toolbar-field-focus-color: light-dark(var(--uc-solarized-base01), var(--uc-solarized-base0)) !important;
+    --toolbarbutton-icon-fill: light-dark(var(--uc-solarized-base01), var(--uc-solarized-base0)) !important;
+    --toolbarbutton-hover-background: light-dark(var(--uc-solarized-base2), var(--uc-solarized-base02)) !important;
+    --toolbarbutton-active-background: light-dark(var(--uc-solarized-base2), var(--uc-solarized-base02)) !important;
+    --lwt-accent-color: light-dark(var(--uc-solarized-base3), var(--uc-solarized-base03)) !important;
+    --lwt-text-color: light-dark(var(--uc-solarized-base01), var(--uc-solarized-base0)) !important;
+    --urlbar-box-bgcolor: light-dark(var(--uc-solarized-base2), var(--uc-solarized-base02)) !important;
+    --urlbar-box-focus-bgcolor: light-dark(var(--uc-solarized-base2), var(--uc-solarized-base02)) !important;
+    --arrowpanel-background: light-dark(var(--uc-solarized-base3), var(--uc-solarized-base03)) !important;
+    --arrowpanel-color: light-dark(var(--uc-solarized-base01), var(--uc-solarized-base0)) !important;
+    --panel-background: var(--arrowpanel-background) !important;
+    --panel-color: var(--arrowpanel-color) !important;
+    --panel-border-color: color-mix(in oklab, var(--uc-solarized-accent) 45%, transparent) !important;
+    --arrowpanel-border-color: color-mix(in oklab, var(--uc-solarized-accent) 45%, transparent) !important;
+    --arrowpanel-dimmed: light-dark(var(--uc-solarized-base2), var(--uc-solarized-base02)) !important;
+    --arrowpanel-dimmed-further: light-dark(var(--uc-solarized-base2), var(--uc-solarized-base02)) !important;
+    --button-primary-bgcolor: var(--uc-solarized-accent) !important;
+    --button-primary-hover-bgcolor: color-mix(in oklab, var(--uc-solarized-accent) 85%, var(--toolbar-color)) !important;
+    --button-primary-active-bgcolor: color-mix(in oklab, var(--uc-solarized-accent) 70%, var(--toolbar-color)) !important;
+    --focus-outline-color: var(--uc-solarized-accent) !important;
+    --toolbarbutton-icon-fill-attention: var(--uc-solarized-accent) !important;
+    --urlbarView-highlight-background: var(--uc-solarized-accent) !important;
+    --urlbarView-highlight-color: light-dark(var(--uc-solarized-base3), var(--uc-solarized-base03)) !important;
+  }
+
   --uc-bg: var(--uc-bg-opaque);
   --uc-bg-tran: var(--uc-bg-opaque);
   --uc-bg-translucency: color-mix(
@@ -38,5 +89,75 @@
   }
   @media -moz-pref( "uc.tweak.translucency") {
     --uc-bg: var(--uc-bg-translucency);
+  }
+}
+
+@media not -moz-pref( "uc.theme.no-solarized") {
+  #titlebar,
+  #navigator-toolbox,
+  #toolbar-menubar,
+  #TabsToolbar,
+  #nav-bar,
+  #PersonalToolbar {
+    background-color: var(--uc-bg) !important;
+    background-image: none !important;
+    color: var(--toolbar-color) !important;
+  }
+
+  toolbarbutton,
+  toolbar .toolbarbutton-1,
+  #urlbar,
+  #searchbar {
+    color: var(--toolbar-color) !important;
+    fill: var(--toolbarbutton-icon-fill) !important;
+  }
+
+  #urlbar[focused] > #urlbar-background,
+  #searchbar:focus-within {
+    outline-color: var(--uc-solarized-accent) !important;
+  }
+
+  panel,
+  menupopup,
+  .panel-arrowcontent,
+  .panel-viewcontainer,
+  .panel-viewstack,
+  panelview,
+  .panel-subview-body,
+  #appMenu-popup,
+  #appMenu-protonMainView,
+  #appMenu-mainView,
+  #appMenu-moreView,
+  #appMenu-fxa-status2,
+  #appMenu-popup panelmultiview,
+  #appMenu-popup panelview,
+  #appMenu-popup .panel-arrowcontent,
+  #appMenu-popup .panel-viewcontainer,
+  #appMenu-popup .panel-viewstack,
+  #appMenu-popup .panel-subview-body,
+  #appMenu-popup .panel-header,
+  #appMenu-popup toolbarbutton,
+  #appMenu-popup .subviewbutton,
+  #appMenu-popup .subviewbutton-nav,
+  #appMenu-popup .toolbaritem-combined-buttons,
+  #appMenu-popup .panel-banner-item,
+  #appMenu-popup .panel-info-button,
+  #appMenu-popup .panel-subview-footer-button,
+  #unified-extensions-view,
+  #customizationui-widget-panel {
+    background-color: var(--arrowpanel-background) !important;
+    background-image: none !important;
+    color: var(--arrowpanel-color) !important;
+    opacity: 1 !important;
+  }
+
+  #appMenu-popup toolbarbutton:hover,
+  #appMenu-popup .subviewbutton:hover {
+    background-color: var(--toolbarbutton-hover-background) !important;
+  }
+
+  #appMenu-popup toolbarbutton:active,
+  #appMenu-popup .subviewbutton:active {
+    background-color: var(--toolbarbutton-active-background) !important;
   }
 }

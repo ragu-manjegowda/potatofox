@@ -61,6 +61,13 @@ user_pref("extensions.pocket.enabled", false);
 user_pref("accessibility.force_disabled", 1);
 user_pref("media.ffmpeg.vaapi.enabled", true);
 
+user_pref("browser.download.open_pdf_attachments_inline", false);
+user_pref("browser.download.viewableInternally.enabledTypes", "xml,svg,webp,avif,jxl");
+user_pref("browser.helperApps.neverAsk.saveToDisk", "application/pdf,application/x-pdf,application/octet-stream");
+
+// The restore script intentionally sideloads pinned XPIs into the profile.
+// Do not let Firefox auto-disable those restored extensions on startup.
+user_pref("extensions.autoDisableScopes", 0);
 
 // darkman: theme preferences - follow system theme
 user_pref("layout.css.prefers-color-scheme.content-override", 2);

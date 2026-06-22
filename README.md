@@ -45,6 +45,18 @@ a firefox and sidebery css theme.
   <img src="./media/no-sidebar-no-urlbar.png" width="900" alt="Potatofox with no sidebar and no urlbar" title="With neither">
 </p>
 
+## themes
+
+potatofox ships with an os-agnostic solarized theme in `chrome/userChrome.css`.
+it uses the solarized palette from the alacritty themes and switches between
+light and dark with firefox's system theme state via `light-dark(...)`.
+
+- light mode uses the solarized light palette with blue accents (`#268bd2`)
+- dark mode uses the solarized dark palette with green accents (`#859900`)
+- customize colors by editing the `--uc-solarized-*` variables in `chrome/userChrome.css`
+- disable the built-in theme by adding `user_pref("uc.theme.no-solarized", true);` to `user.js`
+- external firefox theme extensions may conflict with these local chrome colors
+
 ## install instructions
 
 extension:
@@ -92,7 +104,10 @@ nyoom switch potatofox
 > [!warning]
 > some websites with a white background will have an incorrect background, this
 > can be fixed by using [dark reader](https://addons.mozilla.org/firefox/addon/darkreader/)
-> or by removing `browser.tabs.allow_transparent_browser` from `user.js`
+> or by removing `browser.tabs.allow_transparent_browser` from `user.js`.
+> this only applies when not using the built-in solarized theme; solarized sets
+> an opaque `--uc-content-bg`, so transparent content is disabled and this issue
+> does not occur.
 
 > [!tip]
 > on linux there may be extra padding before/after the window controls, this can
